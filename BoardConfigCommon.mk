@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-BOARD_VENDOR := oneplus
-
 COMMON_PATH := device/oneplus/sdm845-common
 
 # A/B
@@ -46,7 +44,6 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
-TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_USES_SOONG_KERNEL := true
@@ -58,7 +55,6 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.configfs=true \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=a600000.dwc3 \
-    androidboot.boot_devices=soc/1d84000.ufshc \
     ehci-hcd.park=3 \
     firmware_class.path=/vendor/firmware_mnt/image \
     loop.max_part=7 \
@@ -141,7 +137,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_EXT4 := true
