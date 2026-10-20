@@ -33,6 +33,7 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
+odm                                                     /odm                      erofs   ro                                                   wait,slotselect,logical,first_stage_mount
 system                                                  /system                   erofs   ro                                                   wait,slotselect,avb=vbmeta,logical,first_stage_mount
 vendor                                                  /vendor                   erofs   ro                                                   wait,slotselect,avb,logical,first_stage_mount
 /dev/block/by-name/logdump                              /metadata                 ext4    noatime,nosuid,nodev,discard,data=journal,commit=1   wait,check,formattable,first_stage_mount
